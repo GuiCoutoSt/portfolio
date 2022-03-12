@@ -7,34 +7,29 @@ const ImageMotion = motion(Image);
 const TextMotion = motion(Text);
 
 export const Section2 = () => {
-  const variants1 = {
+  const variants = {
     visible: {
       opacity: 1,
     },
     hidden: {
       opacity: 0,
-    },
-  };
-
-  const variants2 = {
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-    hidden: {
-      opacity: 0,
-      y: -10,
     },
   };
 
   return (
     <FlexMotion
       id="section2"
-      flexDir={["column", "column", "column", "row"]}
+      flexDir={["column", "column", "column", "column", "row"]}
       w="80vw"
       h="100vh"
       padding="30px 0"
-      justifyContent={["flex-start", "flex-start", "flex-start", "center"]}
+      justifyContent={[
+        "flex-start",
+        "flex-start",
+        "flex-start",
+        "flex-start",
+        "center",
+      ]}
       alignItems="center"
       // animations
     >
@@ -48,7 +43,7 @@ export const Section2 = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={variants1}
+          variants={variants}
           transition={{ duration: 1 }}
         >
           Sobre Mim
@@ -59,7 +54,7 @@ export const Section2 = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={variants1}
+          variants={variants}
           transition={{ duration: 0.8 }}
         >
           Olá, tudo bem? <br />
@@ -72,7 +67,7 @@ export const Section2 = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={variants1}
+          variants={variants}
           transition={{ duration: 0.8 }}
         >
           Minha tragetória na tecnologia se iniciou de fato em 2019, quando tive
@@ -86,7 +81,7 @@ export const Section2 = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={variants1}
+          variants={variants}
           transition={{ duration: 0.8 }}
         >
           Em 2020, aprofundei meus conhecimentos em <b>Data Science</b>. Porém,
@@ -98,7 +93,7 @@ export const Section2 = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={variants1}
+          variants={variants}
           transition={{ duration: 0.8 }}
         >
           Procurei por várias fontes de conhecimento, porém sentia falta de um
@@ -110,7 +105,7 @@ export const Section2 = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={variants1}
+          variants={variants}
           transition={{ duration: 0.8 }}
         >
           Nessa busca, em 2021, encontrei a <b>Kenzie Academy Brasil</b>. Gostei
@@ -123,7 +118,7 @@ export const Section2 = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={variants1}
+          variants={variants}
           transition={{ duration: 0.8 }}
         >
           Após vários processos, desde o aprender a aprender, até conhecer
@@ -139,7 +134,7 @@ export const Section2 = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={variants1}
+          variants={variants}
           transition={{ duration: 0.8 }}
         >
           No momento continuo meus estudos no Back-end, e continuo me
@@ -149,11 +144,11 @@ export const Section2 = () => {
 
       <ImageMotion
         src={require("../../assets/plant-1.png")}
-        h={["50%", "60%", "70%", "80%", "85%"]}
+        h={["55%", "60%", "70%", "80%", "85%"]}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={variants2}
+        variants={variants}
         transition={{ duration: 2 }}
       />
     </FlexMotion>

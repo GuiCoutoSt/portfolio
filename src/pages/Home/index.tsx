@@ -67,6 +67,7 @@ export const Home = () => {
           >
             <Link
               href="#section2"
+              onClick={onClose}
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
               _hover={{ textDecorationColor: "white" }}
@@ -102,7 +103,7 @@ export const Home = () => {
       <Flex
         w="80vw"
         h="105vh"
-        flexDir={["column", "column", "column", "row"]}
+        flexDir={["column", "column", "column", "column", "row"]}
         justifyContent="space-between"
         alignItems="center"
       >
@@ -110,11 +111,10 @@ export const Home = () => {
           w="80vw"
           h="100vh"
           flexDir="column"
-          alignItems="center"
           animate={{ opacity: [0, 1], y: [-10, 0] }}
         >
           <Box
-            textAlign={["center", "center", "center", "left"]}
+            textAlign={["center", "center", "center", "center", "left"]}
             margin="auto 0"
           >
             <Text
@@ -145,7 +145,7 @@ export const Home = () => {
           src={require("../../assets/bird.png")}
           draggable={false}
           h={["40%", "45%", "55%", "65%", "75%"]}
-          alignSelf={["center", "center", "center", "flex-end"]}
+          alignSelf={["center", "center", "center", "center", "flex-end"]}
           animate={{ opacity: [0, 1], y: [10, 0] }}
         />
       </Flex>
