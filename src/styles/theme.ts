@@ -18,6 +18,9 @@ export const theme = extendTheme({
     body: {
       bg: "white",
       color: "black",
+      "::-webkit-scrollbar": {
+        width: "0.5em",
+      },
     },
   },
 });
