@@ -19,10 +19,18 @@ export const Section2 = () => {
   return (
     <FlexMotion
       id="section2"
-      flexDir={["column", "column", "column", "column", "row"]}
+      as="section"
+      flexDir={["column", "column", "column", "column", "column", "row"]}
       w="80vw"
-      h="100vh"
-      padding="30px 0"
+      h={[
+        "fit-content",
+        "fit-content",
+        "fit-content",
+        "fit-content",
+        "fit-content",
+        "100vh",
+      ]}
+      padding="60px 0"
       justifyContent={[
         "flex-start",
         "flex-start",
@@ -31,7 +39,6 @@ export const Section2 = () => {
         "center",
       ]}
       alignItems="center"
-      // animations
     >
       <Box
         w={["310px", "450px", "550px", "750px"]}
@@ -57,9 +64,8 @@ export const Section2 = () => {
           variants={variants}
           transition={{ duration: 0.8 }}
         >
-          Olá, tudo bem? <br />
-          Sou o Guilherme, tenho 26 anos, moro em Brasília e sou{" "}
-          <b>Desenvolvedor Web Front-end</b>.
+          Olá, tudo bem? Sou o Guilherme, tenho 26 anos, moro em Brasília-DF e
+          sou <b>Desenvolvedor Web Front-end</b>.
         </TextMotion>
 
         <TextMotion
@@ -137,20 +143,21 @@ export const Section2 = () => {
           variants={variants}
           transition={{ duration: 0.8 }}
         >
-          No momento continuo meus estudos no Back-end, e continuo me
+          Atualmente continuo meus estudos no Back-end, e continuo me
           apaixonando diariamente pela tecnologia e programação.
         </TextMotion>
       </Box>
-
-      <ImageMotion
-        src={require("../../assets/plant-1.png")}
-        h={["55%", "60%", "70%", "80%", "85%"]}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={variants}
-        transition={{ duration: 2 }}
-      />
+      <Box>
+        <ImageMotion
+          src={require("../../assets/plant-1.png")}
+          h={["350px", "300px", "500px", "500px", "700px"]}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={variants}
+          transition={{ duration: 2 }}
+        />
+      </Box>
     </FlexMotion>
   );
 };
