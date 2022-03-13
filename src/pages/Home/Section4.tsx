@@ -8,5 +8,5 @@ const ImageMotion = motion(Image);
 const TextMotion = motion(Text);
 
 export const Section4 = () => {
-  return <Flex></Flex>;
+  return <Flex h="100vh"></Flex>;
 };

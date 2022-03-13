@@ -150,7 +150,7 @@ export const Section2 = () => {
       <Box>
         <ImageMotion
           src={require("../../assets/plant-1.png")}
-          h={["350px", "300px", "500px", "500px", "700px"]}
+          h={["400px", "400px", "500px", "500px", "700px"]}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
