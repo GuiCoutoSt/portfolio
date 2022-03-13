@@ -26,7 +26,7 @@ export const Section1 = () => {
           margin="auto 0"
         >
           <Text
-            fontSize={["2xl", "4xl", "5xl", "6xl"]}
+            fontSize={["4xl", "4xl", "5xl", "6xl"]}
             fontWeight="bold"
             overflowWrap="break-word"
           >
@@ -34,7 +34,7 @@ export const Section1 = () => {
           </Text>
           <Text
             color="blue.100"
-            fontSize={["xl", "2xl", "4xl", "5xl"]}
+            fontSize={["2xl", "2xl", "4xl", "5xl"]}
             fontWeight="bold"
             fontStyle="italic"
           >
