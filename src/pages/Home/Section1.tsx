@@ -42,7 +42,7 @@ export const Section1 = () => {
           </Text>
           <Text
             color="pink.100"
-            fontSize={["xl", "2xl", "4xl", "5xl"]}
+            fontSize={["2xl", "2xl", "4xl", "5xl"]}
             fontWeight="bold"
           >
             Front-end
