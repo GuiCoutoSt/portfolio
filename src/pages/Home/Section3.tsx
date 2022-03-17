@@ -18,13 +18,13 @@ export const Section3 = () => {
 
   return (
     <Flex
-      id="section3"
-      as="section"
-      w="80vw"
-      padding="30px 0"
       flexDir="column"
       justifyContent={["center"]}
       alignItems="center"
+      id="interests-and-skills"
+      as="section"
+      w="80vw"
+      padding="30px 0"
     >
       <Flex
         justifyContent="flex-start"
@@ -54,10 +54,10 @@ export const Section3 = () => {
             variants={variants}
             transition={{ duration: 0.8 }}
           >
-            Gosto de desenvolver produtos de qualidade, que tragam princípios
-            minimalistas, tanto visualmente quanto tecnicamente e que agreguem
-            valor, podendo trazer transformação e facilidade para vida das
-            pessoas.
+            Gosto de desenvolver produtos de qualidade, acessíveis, que tragam
+            princípios minimalistas, tanto visualmente quanto tecnicamente e que
+            agreguem valor, podendo trazer transformação e facilidade para vida
+            das pessoas.
           </TextMotion>
 
           <TextMotion
@@ -104,8 +104,10 @@ export const Section3 = () => {
         </BoxMotion>
       </Flex>
       <ImageMotion
-        src={require("../../assets/plant-2.png")}
-        h={["350px", "300px", "500px", "500px", "500px"]}
+        src={require("../../assets/images/plant-2.png")}
+        alt="A Mostera deliciosa plant."
+        h={["275px", "300px", "550px", "600px", "800px"]}
+        zIndex={-1}
         margin="20px 0"
         initial="hidden"
         whileInView="visible"

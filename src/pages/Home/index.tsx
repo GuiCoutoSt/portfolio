@@ -77,7 +77,7 @@ export const Home = () => {
               # sobre mim
             </Link>
             <Link
-              href="#section3"
+              href="#interests-and-skills"
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
               _hover={{ textDecorationColor: "white" }}
@@ -85,7 +85,7 @@ export const Home = () => {
               # meus interesses
             </Link>
             <Link
-              href="#section3"
+              href="#interests-and-skills"
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
               _hover={{ textDecorationColor: "white" }}

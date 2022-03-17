@@ -21,6 +21,14 @@ export const Section2 = () => {
       id="section2"
       as="section"
       flexDir={["column", "column", "column", "column", "column", "row"]}
+      justifyContent={[
+        "flex-start",
+        "flex-start",
+        "flex-start",
+        "flex-start",
+        "center",
+      ]}
+      alignItems="center"
       w="80vw"
       h={[
         "fit-content",
@@ -31,14 +39,6 @@ export const Section2 = () => {
         "100vh",
       ]}
       padding="60px 0"
-      justifyContent={[
-        "flex-start",
-        "flex-start",
-        "flex-start",
-        "flex-start",
-        "center",
-      ]}
-      alignItems="center"
     >
       <Box
         w={["310px", "450px", "550px", "750px"]}
@@ -76,7 +76,7 @@ export const Section2 = () => {
           variants={variants}
           transition={{ duration: 0.8 }}
         >
-          Minha tragetória na tecnologia se iniciou de fato em 2019, quando tive
+          Minha trajetória na tecnologia se iniciou de fato em 2019, quando tive
           o primeiro contato com algumas tecnologias de desenvolvimento, como{" "}
           <b>HTML</b>, <b>CSS</b> e <b>Python</b>, além de{" "}
           <b>lógica de programação</b>.
@@ -149,7 +149,8 @@ export const Section2 = () => {
       </Box>
       <Box>
         <ImageMotion
-          src={require("../../assets/plant-1.png")}
+          src={require("../../assets/images/plant-1.png")}
+          alt="A generic plant"
           h={["400px", "400px", "500px", "500px", "700px"]}
           initial="hidden"
           whileInView="visible"
