@@ -1,12 +1,4 @@
-import {
-  Box,
-  Flex,
-  Link,
-  Modal,
-  ModalContent,
-  ModalOverlay,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Box, Flex, Link } from "@chakra-ui/react";
 
 import { Section1 } from "./Section1";
 import { Section2 } from "./Section2";
@@ -16,15 +8,26 @@ import { Section4 } from "./Section4";
 import Hamburger from "hamburger-react";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const FlexMotion = motion(Flex);
 const BoxMotion = motion(Box);
 
 export const Home = () => {
-  const { isOpen, onClose, onToggle } = useDisclosure();
+  const [open, setOpen] = useState(false);
+
+  const variants = {
+    open: { opacity: 1 },
+    closed: { opacity: 0 },
+  };
 
   return (
-    <Flex flexDir="column" alignItems={["center"]} justifyContent="flex-start">
+    <Flex
+      flexDir="column"
+      alignItems={["center"]}
+      justifyContent="flex-start"
+      position="relative"
+    >
       <BoxMotion
         as="span"
         bgColor="white"
@@ -42,8 +45,8 @@ export const Home = () => {
         }}
       >
         <Hamburger
-          toggled={isOpen}
-          onToggle={onToggle}
+          toggled={open}
+          toggle={setOpen}
           color="#000"
           distance="sm"
           rounded
@@ -51,28 +54,31 @@ export const Home = () => {
           hideOutline={false}
         />
       </BoxMotion>
-
-      <Modal
-        isOpen={isOpen}
-        onClose={onClose}
-        isCentered
-        blockScrollOnMount={false}
-      >
-        <ModalOverlay bgColor="rgba(0, 0, 0, .8)" zIndex="2" />
-        <ModalContent bgColor="transparent" w="fit-content" boxShadow="none">
-          <FlexMotion
-            w="fit-content"
+      {open && (
+        <FlexMotion
+          justifyContent="center"
+          alignItems="center"
+          position="fixed"
+          w="100%"
+          h="100vh"
+          bgColor="rgba(0, 0, 0, .8)"
+          zIndex="2"
+          onClick={() => setOpen(false)}
+          animate={{ opacity: [0.8, 1] }}
+          transition={{ duration: 0.2 }}
+          exit={{ opacity: 0.9 }}
+        >
+          <Flex
             flexDir="column"
+            w="fit-content"
+            boxShadow="none"
             color="white"
             fontSize={["xl", "2xl", "3xl"]}
             fontWeight="semibold"
-            animate={{ opacity: [0, 1] }}
-            transition={{ duration: 0.8 }}
-            exit={{ opacity: 0 }}
           >
             <Link
               href="#about-me"
-              onClick={onClose}
+              onClick={() => setOpen(false)}
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
               _hover={{ textDecorationColor: "white" }}
@@ -81,7 +87,7 @@ export const Home = () => {
             </Link>
             <Link
               href="#interests"
-              onClick={onClose}
+              onClick={() => setOpen(false)}
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
               _hover={{ textDecorationColor: "white" }}
@@ -90,7 +96,7 @@ export const Home = () => {
             </Link>
             <Link
               href="#skills"
-              onClick={onClose}
+              onClick={() => setOpen(false)}
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
               _hover={{ textDecorationColor: "white" }}
@@ -99,7 +105,7 @@ export const Home = () => {
             </Link>
             <Link
               href="#works"
-              onClick={onClose}
+              onClick={() => setOpen(false)}
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
               _hover={{ textDecorationColor: "white" }}
@@ -107,16 +113,17 @@ export const Home = () => {
               # works
             </Link>
             <Link
-              onClick={onClose}
+              onClick={() => setOpen(false)}
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
               _hover={{ textDecorationColor: "white" }}
             >
               # contato
             </Link>
-          </FlexMotion>
-        </ModalContent>
-      </Modal>
+          </Flex>
+        </FlexMotion>
+      )}
+
       <Section1 />
       <Section2 />
       <Section3 />
