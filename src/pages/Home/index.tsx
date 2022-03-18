@@ -16,11 +16,6 @@ const BoxMotion = motion(Box);
 export const Home = () => {
   const [open, setOpen] = useState(false);
 
-  const variants = {
-    open: { opacity: 1 },
-    closed: { opacity: 0 },
-  };
-
   return (
     <Flex
       flexDir="column"
@@ -65,7 +60,7 @@ export const Home = () => {
           zIndex="2"
           onClick={() => setOpen(false)}
           animate={{ opacity: [0.8, 1] }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.1 }}
           exit={{ opacity: 0.9 }}
         >
           <Flex
