@@ -13,13 +13,12 @@ export const Section1 = () => {
       justifyContent="space-between"
       alignItems="center"
       w="80vw"
-      h="100vh"
-      padding="10px 0"
+      h="100%"
+      m="100px 0"
     >
       <FlexMotion
         flexDir="column"
-        w="80vw"
-        h="100vh"
+        w="100%"
         animate={{ opacity: [0, 1], y: [-10, 0] }}
       >
         <Box
@@ -50,12 +49,11 @@ export const Section1 = () => {
           </Text>
         </Box>
       </FlexMotion>
-
       <ImageMotion
         src={require("../../assets/images/bird.png")}
         alt="A bird perched."
         draggable={false}
-        h={["320px", "340px", "460px", "630px", "650px"]}
+        h={["320px", "340px", "460px", "630px", "900px"]}
         alignSelf={[
           "center",
           "center",
