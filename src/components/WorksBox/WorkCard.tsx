@@ -54,7 +54,7 @@ export const WorkCard = ({
       whileHover={{
         y: -2,
         x: 2,
-        boxShadow: "-5px 5px black",
+        boxShadow: "-3px 3px black",
         transition: { ease: "easeOut", duration: 0.3 },
       }}
     >

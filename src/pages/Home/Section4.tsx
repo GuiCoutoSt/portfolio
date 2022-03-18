@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 const FlexMotion = motion(Flex);
 const TextMotion = motion(Text);
+const ButtomMotion = motion(Button);
 
 export const Section4 = () => {
   const variants = {
@@ -22,9 +23,13 @@ export const Section4 = () => {
   };
 
   return (
-    <FlexMotion flexDir="column">
-      <Box w={["310px", "450px", "550px", "750px"]}>
+    <FlexMotion as="section" flexDir="column">
+      <Box
+        w={["310px", "450px", "550px", "750px"]}
+        padding={["20px", "20px", "10px", "50px"]}
+      >
         <TextMotion
+          id="works"
           fontSize={["2xl", "4xl", "4xl", "5xl"]}
           fontWeight="bold"
           initial="hidden"
@@ -48,17 +53,22 @@ export const Section4 = () => {
           por favor, visite meu <b>GitHub</b>:
         </TextMotion>
 
-        <Button
+        <ButtomMotion
           onClick={() => {
             handleClick("https://github.com/GuiCoutoSt");
           }}
           bgColor="white"
           color="black"
           border="3px solid black"
-          _hover={{ bgColor: "black", color: "white" }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={variants}
+          transition={{ duration: 0.8 }}
+          whileHover={{ backgroundColor: "black", color: "white" }}
         >
           GitHub
-        </Button>
+        </ButtomMotion>
       </Box>
       <WorksBox />
     </FlexMotion>

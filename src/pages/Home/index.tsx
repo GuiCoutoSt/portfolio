@@ -25,19 +25,20 @@ export const Home = () => {
 
   return (
     <Flex flexDir="column" alignItems={["center"]} justifyContent="flex-start">
-      {/*First Page */}
-
       <BoxMotion
+        as="span"
         bgColor="white"
         position="fixed"
         top="5"
         right="5"
         animate={{ opacity: [0, 1] }}
-        zIndex="1"
         boxShadow="0px 0px 10px rgba(0, 0, 0, 0.2)"
         borderRadius="50px"
-        css={{
+        _css={{
           "-webkit-tap-highlight-color": "transparent",
+        }}
+        _first={{
+          zIndex: 3,
         }}
       >
         <Hamburger
@@ -46,6 +47,8 @@ export const Home = () => {
           color="#000"
           distance="sm"
           rounded
+          size={25}
+          hideOutline={false}
         />
       </BoxMotion>
 
@@ -55,7 +58,7 @@ export const Home = () => {
         isCentered
         blockScrollOnMount={false}
       >
-        <ModalOverlay bgColor="rgba(0, 0, 0, .8)" zIndex="0" />
+        <ModalOverlay bgColor="rgba(0, 0, 0, .8)" zIndex="2" />
         <ModalContent bgColor="transparent" w="fit-content" boxShadow="none">
           <FlexMotion
             w="fit-content"
@@ -68,7 +71,7 @@ export const Home = () => {
             exit={{ opacity: 0 }}
           >
             <Link
-              href="#section2"
+              href="#about-me"
               onClick={onClose}
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
@@ -77,7 +80,8 @@ export const Home = () => {
               # sobre mim
             </Link>
             <Link
-              href="#interests-and-skills"
+              href="#interests"
+              onClick={onClose}
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
               _hover={{ textDecorationColor: "white" }}
@@ -85,7 +89,8 @@ export const Home = () => {
               # meus interesses
             </Link>
             <Link
-              href="#interests-and-skills"
+              href="#skills"
+              onClick={onClose}
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
               _hover={{ textDecorationColor: "white" }}
@@ -93,6 +98,8 @@ export const Home = () => {
               # skills
             </Link>
             <Link
+              href="#works"
+              onClick={onClose}
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
               _hover={{ textDecorationColor: "white" }}
@@ -100,6 +107,7 @@ export const Home = () => {
               # works
             </Link>
             <Link
+              onClick={onClose}
               textDecoration="underline 0.15em rgba(0, 0, 0, 0)"
               transition="text-decoration-color 300ms"
               _hover={{ textDecorationColor: "white" }}

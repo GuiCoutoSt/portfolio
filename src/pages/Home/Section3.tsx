@@ -21,7 +21,6 @@ export const Section3 = () => {
       flexDir="column"
       justifyContent={["center"]}
       alignItems="center"
-      id="interests-and-skills"
       as="section"
       w="80vw"
       padding="30px 0"
@@ -35,6 +34,7 @@ export const Section3 = () => {
           padding={["20px", "20px", "10px", "50px"]}
         >
           <TextMotion
+            id="interests"
             fontSize={["2xl", "4xl", "4xl", "5xl"]}
             fontWeight="bold"
             initial="hidden"
@@ -84,7 +84,7 @@ export const Section3 = () => {
           variants={variants}
           transition={{ duration: 1 }}
         >
-          <TextMotion>Skills</TextMotion>
+          <TextMotion id="skills">Skills</TextMotion>
 
           <Box>
             <Text fontWeight="semibold" fontSize="xl" color="blue.100">

@@ -8,7 +8,7 @@ const ImageMotion = motion(Image);
 export const Section1 = () => {
   return (
     <Flex
-      id="section1"
+      id="top"
       flexDir={["column", "column", "column", "column", "column", "row"]}
       justifyContent="space-between"
       alignItems="center"

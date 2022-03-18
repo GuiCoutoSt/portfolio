@@ -9,7 +9,7 @@ export const WorksBox = () => {
       position="relative"
       mt="30px"
       _before={{
-        zIndex: 2,
+        zIndex: 1,
         content: "''",
         position: "absolute",
         top: "0",

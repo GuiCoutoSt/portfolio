@@ -18,7 +18,6 @@ export const Section2 = () => {
 
   return (
     <FlexMotion
-      id="section2"
       as="section"
       flexDir={["column", "column", "column", "column", "column", "row"]}
       justifyContent={[
@@ -45,6 +44,7 @@ export const Section2 = () => {
         padding={["20px", "20px", "10px", "50px"]}
       >
         <TextMotion
+          id="about-me"
           fontSize={["2xl", "4xl", "4xl", "5xl"]}
           fontWeight="bold"
           initial="hidden"
