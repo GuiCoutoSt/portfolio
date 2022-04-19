@@ -106,7 +106,7 @@ export const Section3 = () => {
       <ImageMotion
         src={require("../../assets/images/plant-2.png")}
         alt="A Mostera deliciosa plant."
-        h={["275px", "300px", "550px", "600px", "800px"]}
+        h={["275px", "300px", "500px", "550px", "600px"]}
         zIndex={-1}
         margin="20px 0"
         initial="hidden"
